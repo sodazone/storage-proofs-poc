@@ -37,7 +37,7 @@ Refer to `poc/proof.ts` for details.
 
 ## Development
 
-> [:NOTE]
+> [!NOTE]
 > You'll need Cargo to compile the oc-proofs WebAssembly module.
 
 To create the wasm package:
