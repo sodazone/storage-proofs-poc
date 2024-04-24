@@ -1,0 +1,25 @@
+[package]
+name = "oc-proofs"
+description = "Storage proofs verification PoC"
+version = "0.0.1"
+license = "Apache-2.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+smoldot = { version = "0.17.0", default-features = false }
+derive_more = "0.99.17"
+serde = { version = "1.0", default-features = false }
+tsify = { version = "0.4.5", features = ["js"] }
+wasm-bindgen = "0.2.87"
+serde-wasm-bindgen = "0.6.3"
+wasm-bindgen-futures = "0.4"
+log = "0.4"
+console_error_panic_hook = "0.1"
+console_log = { version = "1.0" }
+
+[profile.release]
+codegen-units = 1
+lto = true

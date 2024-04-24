@@ -1,0 +1,29 @@
+{
+  "name": "@sodazone/storage-proofs",
+  "description": "Storage proofs PoC",
+  "type": "module",
+  "main": "./dist/oc_proofs.js",
+  "module": "./dist/oc_proofs.mjs",
+  "types": "./dist/oc_proofs.d.ts",
+  "scripts": {
+    "verify": "bun poc/verify.ts",
+    "proof": "bun poc/proof.ts",
+    "lint": "biome format --write poc/ && biome lint --apply poc/",
+    "wasm": "wasm-pack build --target nodejs --out-dir ./dist/pkg && bun patch.mjs"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.1",
+    "wasm-pack": "^0.12.1",
+    "bun-types": "latest"
+  },
+  "dependencies": {
+    "@polkadot/api": "^10.13.1",
+    "@polkadot/util": "^12.6.2",
+    "@sodazone/ocelloids-sdk": "^1.2.3",
+    "import": "^0.0.6",
+    "subshape": "^0.14.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
