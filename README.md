@@ -35,6 +35,11 @@ bun proof
 
 Refer to `poc/proof.ts` for details.
 
+### Ethereum
+
+An example of proofs for Ethereum consensus and execution can be found in `poc/eth2`.
+🔥 It can be tied to the Snowbridge beacon block hash proof.
+
 ## Development
 
 > [!NOTE]
