@@ -2,7 +2,7 @@ import { ssz } from "@lodestar/types/deneb";
 import type { TreeOffsetProof } from "@chainsafe/persistent-merkle-tree";
 import { u8aToHex } from "@polkadot/util";
 import Web3 from "web3";
-import { sepoliaBeaconBlockHash, sepoliaEthAccount } from "./test-proofs";
+import { sepoliaBeaconBlockHash, sepoliaEthAccount } from "../_data/ethereum";
 
 const web3 = new Web3("https://lodestar-sepoliarpc.chainsafe.io");
 

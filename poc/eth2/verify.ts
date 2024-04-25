@@ -13,7 +13,7 @@ import {
   sepoliaBeaconBlockHash,
   type ExecutionProof,
   sepoliaEthAccount,
-} from "./test-proofs";
+} from "../_data/ethereum";
 
 async function verify(
   beaconBlockHash: string,

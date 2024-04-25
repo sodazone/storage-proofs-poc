@@ -6,7 +6,7 @@ import {
   AssethubBalanceProof,
   SnowbridgeBeaconProof,
   type ProofData,
-} from "./test-proofs";
+} from "./_data/substrate";
 
 async function verify({ trusted, paraHeadProof, storageProof }: ProofData) {
   try {
