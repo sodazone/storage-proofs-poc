@@ -38,6 +38,7 @@ Refer to `poc/proof.ts` for details.
 ### Ethereum
 
 An example of proofs for Ethereum consensus and execution can be found in `poc/eth2`.
+
 🔥 It can be tied to the Snowbridge beacon block hash proof.
 
 ## Development
@@ -55,6 +56,6 @@ You can find a pre-compiled package in `dist/`.
 
 ---
 
-:zap::zap:
+:zap: Enjoy :zap:
 
 
