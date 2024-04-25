@@ -17,6 +17,7 @@
     "bun-types": "latest"
   },
   "dependencies": {
+    "@lodestar/types": "^1.18.0",
     "@polkadot/api": "^10.13.1",
     "@polkadot/util": "^12.6.2",
     "@sodazone/ocelloids-sdk": "^1.2.3",
