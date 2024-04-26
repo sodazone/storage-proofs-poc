@@ -61,7 +61,7 @@ async function verify(
     root: storageHash,
     useKeyHashing: true,
   });
-  await storageTrie.fromProof(
+  await storageTrie.updateFromProof(
     executionProof.storageProof[1].proof.map((p: string) => toBytes(p)),
   );
   const storageVal = await storageTrie.get(
