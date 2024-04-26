@@ -4,7 +4,7 @@ import { ssz } from "@lodestar/types/deneb";
 import type { TreeOffsetProof } from "@chainsafe/persistent-merkle-tree";
 import { Trie } from "@ethereumjs/trie";
 import { RLP } from "@ethereumjs/rlp";
-import { toBuffer, bufferToBigInt, bufferToHex } from "@ethereumjs/util";
+import { toBytes, bytesToBigInt, bytesToHex } from "@ethereumjs/util";
 import { hexToU8a, u8aToHex } from "@polkadot/util";
 
 import {
@@ -46,14 +46,14 @@ async function verify(
     useKeyHashing: true,
   });
   await accountTrie.fromProof(
-    executionProof.accountProof.map((p: string) => toBuffer(p)),
+    executionProof.accountProof.map((p: string) => toBytes(p)),
   );
-  const accountVal = await accountTrie.get(toBuffer(sepoliaEthAccount), true);
+  const accountVal = await accountTrie.get(toBytes(sepoliaEthAccount), true);
   const storageHash = RLP.decode(accountVal)[2] as Buffer;
 
   console.log(
     "            └── Storage Hash\t",
-    bufferToHex(storageHash),
+    bytesToHex(storageHash),
     sepoliaEthAccount,
   );
 
@@ -62,17 +62,17 @@ async function verify(
     useKeyHashing: true,
   });
   await storageTrie.fromProof(
-    executionProof.storageProof[1].proof.map((p: string) => toBuffer(p)),
+    executionProof.storageProof[1].proof.map((p: string) => toBytes(p)),
   );
   const storageVal = await storageTrie.get(
-    toBuffer(
+    toBytes(
       "0x0000000000000000000000000000000000000000000000000000000000000013",
     ),
   );
 
   assert(storageVal !== null);
 
-  const bn = bufferToBigInt(RLP.decode(storageVal) as Buffer);
+  const bn = bytesToBigInt(RLP.decode(storageVal) as Buffer);
   assert.equal(bn, 359137n);
 }
 

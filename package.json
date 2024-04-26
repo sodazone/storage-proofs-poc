@@ -17,12 +17,14 @@
     "bun-types": "latest"
   },
   "dependencies": {
+    "@ethereumjs/trie": "^6.2.0",
     "@lodestar/types": "^1.18.0",
     "@polkadot/api": "^10.13.1",
     "@polkadot/util": "^12.6.2",
     "@sodazone/ocelloids-sdk": "^1.2.3",
     "import": "^0.0.6",
-    "subshape": "^0.14.0"
+    "subshape": "^0.14.0",
+    "web3": "^4.8.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
